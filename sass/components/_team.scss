@@ -1,0 +1,69 @@
+/* --------НАША КОМАНДА-------- */
+.team {
+	background-color: #f5f4fa;
+
+	&__list {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__item {
+		flex-basis: calc(100% / 4);
+		height: auto;
+		background-color: #ffffff;
+		border-radius: 0px 0px 4px 4px;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	&__content {
+		padding: 30px 32px;
+	}
+
+	&__title {
+		font-size: 36px;
+		line-height: 1.17;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__name {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1.19;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	&__profession {
+		font-size: 16px;
+		line-height: 1.19;
+		text-align: center;
+		margin-bottom: 16px;
+	}
+
+	&__soc {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+}
+
+.soc-icon {
+	fill: currentColor;
+}
+
+.item__soc-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--soc-primary-color);
+	transition: color var(--transition-effect), background-color var(--transition-effect);
+
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+		color: var(--second-text-color);
+	}
+}
