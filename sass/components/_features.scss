@@ -3,13 +3,28 @@
 .feature__page {
 	padding-bottom: 0;
 }
+
 .feature__container {
-	display: flex;
-	gap: 30px;
+	display: block;
+	@include tab {
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	@include desk {
+		flex-wrap: nowrap;
+	}
 }
 
 .feature__item {
-	width: 270px;
+	max-width: 100%;
+	@include tab {
+		max-width: calc((100% - 60px) / 2);
+	}
+	@include desk {
+		width: 100%;
+	}
 	&__box {
 		display: flex;
 		align-items: center;
@@ -25,10 +40,13 @@
 		line-height: 1.14;
 		text-transform: uppercase;
 		margin-bottom: 10px;
+		@media screen and (max-width: 1199px) {
+			text-align: center;
+		}
 	}
 	&__text {
 		font-size: 14px;
 		line-height: 1.71;
-		width: 270px;
+		max-width: 100%;
 	}
 }

@@ -1,6 +1,11 @@
 /* --------------Чем мы занимаемся------------- */
 
 .work {
+	@include desk {
+		display: block;
+	}
+	display: none;
+
 	&__title {
 		font-size: 36px;
 		line-height: 1.17;
