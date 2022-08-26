@@ -430,10 +430,6 @@ img {
 }
 
 /* --------------------header--------------------- */
-.hero {
-  display: none;
-}
-
 .header {
   display: none;
 }
@@ -661,10 +657,20 @@ img {
   padding-top: 0;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
+  background-image: url(../../images/Header-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: top;
   /* button */
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url(../../images/Header-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
+  }
 }
 .hero__container {
   padding-top: 200px;
@@ -674,13 +680,24 @@ img {
   color: var(--second-text-color);
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 21px;
+  line-height: 1.5;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
-  max-width: 696px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .hero__button {
   color: var(--second-text-color);
@@ -908,32 +925,46 @@ img {
 /* ----------------------clients-------------------- */
 .clients__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 1200px) {
   .clients__title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 .clients__list {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: calc((100vw - 60px) / 2);
   height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border var(--transition-effect), color var(--transition-effect);
+}
+@media screen and (min-width: 480px) {
+  .clients__link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__link:hover, .clients__link:focus {
   color: var(--accent-color);
