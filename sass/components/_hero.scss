@@ -1,28 +1,49 @@
 /* ----------------------Hero--------------------- */
 .hero {
 	max-width: 1600px;
-	background-color: #2f303a;
-	text-align: center;
+
 	padding-bottom: 0;
 	padding-top: 0;
 	margin-left: auto;
 	margin-right: auto;
-	background-image: url(../../images/Header-bg-mob.jpg);
-	@include tab {
-		background-image: url(../../images/Header-bg-tab.jpg);
-	}
-
-	@include desk {
-		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
-	}
-	background-repeat: no-repeat;
-	background-position: top;
 
 	&__container {
-		padding-top: 200px;
-		padding-bottom: 200px;
-	}
+		padding-top: 118px;
+		padding-bottom: 118px;
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../../images/Header-bg-mob.jpg);
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../../images/Header-bg-mob-2x.jpg);
+		}
 
+		@include tab {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../../images/Header-bg-tab.jpg);
+			@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+				background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+					url(../../images/Header-bg-tab-2x.jpg);
+			}
+		}
+
+		@include desk {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../../images/Header-bg.jpg);
+			@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+				background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+					url(../../images/Header-bg-2x.jpg);
+			}
+		}
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+		background-color: #2f303a;
+		text-align: center;
+		@include desk {
+			padding-top: 200px;
+			padding-bottom: 200px;
+		}
+	}
 	&__title {
 		color: var(--second-text-color);
 		text-transform: uppercase;
@@ -54,10 +75,14 @@
 		line-height: 1.88;
 		letter-spacing: 0.06em;
 		border-radius: 4px;
-		padding: 10px 32px;
-		min-width: 200px;
+		padding: 10px 24px;
+		max-width: 201px;
 		border: none;
 		transition: color var(--transition-effect), background-color var(--transition-effect);
+		@include desk {
+			max-width: 216px;
+			padding: 10px 32px;
+		}
 	}
 
 	&__button:hover,

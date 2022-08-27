@@ -2,9 +2,12 @@
 .filter {
 	margin-bottom: 54px;
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	gap: 8px;
-
+	flex-wrap: wrap;
+	@include tab {
+		justify-content: center;
+	}
 	&__button {
 		background-color: #f5f4fa;
 		color: var(--title-text-color);
@@ -31,15 +34,33 @@
 }
 
 .projects {
-	display: flex;
-	gap: 30px;
-	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	@include tab {
+		display: flex;
+		gap: 30px;
+		flex-wrap: wrap;
+	}
 
 	&__item {
-		flex-basis: calc(100% / 3);
-		max-width: 370px;
-		max-height: 404px;
 		transition: box-shadow var(--transition-effect);
+		@include tab {
+			flex-basis: calc(100% / 2);
+			max-width: 354px;
+			max-height: 440px;
+			height: 100%;
+		}
+		@include desk {
+			flex-basis: calc(100% / 3);
+			max-width: 370px;
+		}
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 30px;
+		@include tab {
+			margin-bottom: 0;
+		}
 	}
 
 	&__item:hover,
@@ -50,6 +71,7 @@
 	&__link {
 		color: currentColor;
 		text-decoration: none;
+		height: 100%;
 	}
 
 	&__box {
@@ -76,6 +98,12 @@
 	}
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.projects__item:first-child .projects__content {
+		padding-bottom: 56px;
+	}
+}
+
 .overlay {
 	position: absolute;
 	width: 100%;
@@ -83,15 +111,21 @@
 	background-color: rgba(33, 150, 243, 0.9);
 	top: 0;
 	left: 0;
-	padding: 63px 24px;
+	padding: 77px 24px;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 1.56;
 	letter-spacing: 0.03em;
 	color: var(--second-text-color);
-	transform: translateY(100%);
+	transform: translateY(101%);
 	overflow: auto;
 	transition: transform var(--transition-effect);
+	@include tab {
+		padding: 49px 24px;
+	}
+	@include desk {
+		padding: 63px 24px;
+	}
 }
 
 .projects__item:focus .overlay,

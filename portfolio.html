@@ -12,31 +12,49 @@
 			<div class="header__container container">
 				<!-- prettier-ignore -->
 				<a href="./index.html" class="logo header__logo">Web<span class="header__logo--black">Studio</span></a>
-				<nav>
-					<ul class="nav list">
-						<li class="nav__item"><a href="./index.html" class="nav__link link">Студия</a></li>
-						<li class="nav__item"><a href="./portfolio.html" class="nav__link link current-page">Портфолио</a></li>
-						<li class="nav__item"><a href="" class="nav__link link">Контакты</a></li>
+				<button type="button" class="btn-menu btn-menu--open" aria-expanded="false" aria-controls="menu">
+					<svg width="19px" height="19px" aria-label="переключатель мобильного меню">
+						<use href="./images/icons.svg#open-menu" class="open-menu"></use>
+					</svg>
+				</button>
+				<div class="menu" id="menu">
+					<button type="button" class="btn-menu btn-menu--close" aria-expanded="false" aria-controls="menu">
+						<svg width="19px" height="19px" aria-label="переключатель мобильного меню">
+							<use href="./images/icons.svg#close-menu" class="close-menu"></use>
+						</svg>
+					</button>
+					<nav>
+						<ul class="nav list">
+							<li class="nav__item"><a href="./index.html" class="nav__link link">Студия</a></li>
+							<li class="nav__item"><a href="./portfolio.html" class="nav__link link current-page">Портфолио</a></li>
+							<li class="nav__item"><a href="" class="nav__link link">Контакты</a></li>
+						</ul>
+					</nav>
+					<ul class="auth list">
+						<li class="auth__item">
+							<a href="mailto:info@devstudio.com" class="link auth__link auth__link-mail">
+								<svg class="header__contacts-icon env" width="21" height="16">
+									<use href="./images/icons.svg#icon-envelope"></use>
+								</svg>
+								info@devstudio.com
+							</a>
+						</li>
+						<li class="auth__item">
+							<a href="tel:+380961111111" class="link auth__link auth__link-tel">
+								<svg class="header__contacts-icon smrt" width="16" height="21">
+									<use href="./images/icons.svg#icon-smartphone"></use>
+								</svg>
+								+38 096 111 11 11
+							</a>
+						</li>
 					</ul>
-				</nav>
-				<ul class="auth list">
-					<li class="auth__item">
-						<a href="mailto:info@devstudio.com" class="link auth__link auth__link-mail">
-							<svg class="header__contacts-icon env" width="21" height="16">
-								<use href="./images/icons.svg#icon-envelope"></use>
-							</svg>
-							info@devstudio.com
-						</a>
-					</li>
-					<li class="auth__item">
-						<a href="tel:+380961111111" class="link auth__link auth__link-tel">
-							<svg class="header__contacts-icon smrt" width="16" height="21">
-								<use href="./images/icons.svg#icon-smartphone"></use>
-							</svg>
-							+38 096 111 11 11
-						</a>
-					</li>
-				</ul>
+					<ul class="menu__soc">
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link menu__soc-link--first">Instagram</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link">Twitter</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link">Facebook</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link menu__soc-link--last">LinkedIn</a></li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<main class="main">
@@ -57,11 +75,26 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img
-										src="./images/img-1.jpg"
-										alt="фото открытого ноута на мониторе веб-сайт Технокряк"
-										class="projects__foto"
-									/>
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-1.jpg 1x, ./images/desk-portfolio-img-1-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-1.jpg 1x, ./images/tab-portfolio-img-1-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-1.jpg 1x, ./images/mob-portfolio-img-1-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-1.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
+
 									<p class="overlay">
 										Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
 										посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -77,11 +110,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img
-										src="./images/img-2.jpg"
-										alt="Постер Новый Орлеан против Голден Стейт Вариорз"
-										class="projects__foto"
-									/>
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-2.jpg 1x, ./images/desk-portfolio-img-2-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-2.jpg 1x, ./images/tab-portfolio-img-2-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-2.jpg 1x, ./images/mob-portfolio-img-2-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-2.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad maiores quis itaque debitis, corporis
 										unde nulla magni dignissimos quae officia. Accusantium impedit molestias perspiciatis voluptate
@@ -98,7 +145,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img src="./images/img-3.jpg" alt="лого ресторана" class="projects__foto" />
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-3.jpg 1x, ./images/desk-portfolio-img-3-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-3.jpg 1x, ./images/tab-portfolio-img-3-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-3.jpg 1x, ./images/mob-portfolio-img-3-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-3.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -115,7 +180,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img src="./images/img-4.jpg" alt="наушники" class="projects__foto" />
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-4.jpg 1x, ./images/desk-portfolio-img-4-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-4.jpg 1x, ./images/tab-portfolio-img-4-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-4.jpg 1x, ./images/mob-portfolio-img-4-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-4.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -133,7 +216,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img src="./images/img-5.jpg" alt="две коробки разных размеров" class="projects__foto" />
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-5.jpg 1x, ./images/desk-portfolio-img-5-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-5.jpg 1x, ./images/tab-portfolio-img-5-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-5.jpg 1x, ./images/mob-portfolio-img-5-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-5.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -151,7 +252,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img src="./images/img-6.jpg" alt="монитор с изображением веб-сайта" class="projects__foto" />
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-6.jpg 1x, ./images/desk-portfolio-img-6-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-6.jpg 1x, ./images/tab-portfolio-img-6-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-6.jpg 1x, ./images/mob-portfolio-img-6-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-6.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -169,11 +288,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img
-										src="./images/img-7.jpg"
-										alt="открытая книга-журнал с фото и текстом внутри"
-										class="projects__foto"
-									/>
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-7.jpg 1x, ./images/desk-portfolio-img-7-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-7.jpg 1x, ./images/tab-portfolio-img-7-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-7.jpg 1x, ./images/mob-portfolio-img-7-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-7.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -191,7 +324,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img src="./images/img-8.jpg" alt="лэйба на веревочке с надписью" class="projects__foto" />
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-8.jpg 1x, ./images/desk-portfolio-img-8-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-8.jpg 1x, ./images/tab-portfolio-img-8-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-8.jpg 1x, ./images/mob-portfolio-img-8-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-8.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -209,7 +360,25 @@
 						<li class="projects__item">
 							<a href="" class="projects__link">
 								<div class="projects__box">
-									<img src="./images/img-9.jpg" alt="печатающие руки за открытым ноутом" class="projects__foto" />
+									<picture>
+										<source
+											srcset="./images/desk-portfolio-img-9.jpg 1x, ./images/desk-portfolio-img-9-2x.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/tab-portfolio-img-9.jpg 1x, ./images/tab-portfolio-img-9-2x.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/mob-portfolio-img-9.jpg 1x, ./images/mob-portfolio-img-9-2x.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img
+											src="./images/mob-portfolio-img-9.jpg"
+											alt="фото открытого ноута на мониторе веб-сайт Технокряк"
+											class="projects__foto"
+										/>
+									</picture>
 									<p class="overlay">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores placeat harum
 										accusantium numquam dolore amet aliquid eius quam magnam temporibus illum, reprehenderit rem
@@ -230,11 +399,13 @@
 		</main>
 		<footer class="footer">
 			<div class="container footer__container">
-				<div>
-					<!-- prettier-ignore -->
-					<a href="./index.html" class="logo footer__logo">Web<span class="footer__logo--white">Studio</span></a>
+				<div class="footer__common">
 					<address>
 						<ul class="list list__address">
+							<li>
+								<!-- prettier-ignore -->
+								<a href="./index.html" class="logo footer__logo">Web<span class="footer__logo--white">Studio</span></a>
+							</li>
 							<li>
 								<a href="https://goo.gl/maps/J37NzG6z3w71KRSu6" class="address__map">г. Киев, пр-т Леси Украинки, 26</a>
 							</li>
@@ -242,50 +413,53 @@
 							<li><a href="tel:+380991111111" class="link address__link address__link-tel">+38 099 111 11 11</a></li>
 						</ul>
 					</address>
-				</div>
-				<div class="footer-soc">
-					<h2 class="footer-soc__title">присоединяйтесь</h2>
-					<ul class="footer-soc__list list">
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon instagram" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-instagram"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon twitter" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-twitter"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon facebook" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon linkedin" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-linkedin"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
+					<div class="footer-soc">
+						<h2 class="footer-soc__title">присоединяйтесь</h2>
+						<ul class="footer-soc__list list">
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon instagram" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon twitter" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon facebook" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon linkedin" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<form class="footer-sign">
 					<p class="footer-sign__title">Подпишитесь на рассылку</p>
-					<label for="footer-mail"></label>
-					<input type="email" name="footer-mail" id="footer-mail" class="footer-sign__input" placeholder="E-mail" />
-					<button type="submit" class="footer__btn-submit">
-						Подписаться
-						<svg class="sign__icon-plane"><use href="./images/icons.svg#icon-send"></use></svg>
-					</button>
+					<div class="sign__wrap">
+						<label for="footer-mail"></label>
+						<input type="email" name="footer-mail" id="footer-mail" class="footer-sign__input" placeholder="E-mail" />
+						<button type="submit" class="footer__btn-submit">
+							Подписаться
+							<svg class="sign__icon-plane"><use href="./images/icons.svg#icon-send"></use></svg>
+						</button>
+					</div>
 				</form>
 			</div>
 		</footer>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

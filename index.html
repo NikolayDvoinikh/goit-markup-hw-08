@@ -12,7 +12,17 @@
 			<div class="header__container container">
 				<!-- prettier-ignore -->
 				<a href="./index.html" class="logo header__logo">Web<span class="header__logo--black">Studio</span></a>
-				<div class="menu is-open" id="menu">
+				<button type="button" class="btn-menu btn-menu--open" aria-expanded="false" aria-controls="menu">
+					<svg width="19px" height="19px" aria-label="переключатель мобильного меню">
+						<use href="./images/icons.svg#open-menu" class="open-menu"></use>
+					</svg>
+				</button>
+				<div class="menu" id="menu">
+					<button type="button" class="btn-menu btn-menu--close" aria-expanded="false" aria-controls="menu">
+						<svg width="19px" height="19px" aria-label="переключатель мобильного меню">
+							<use href="./images/icons.svg#close-menu" class="close-menu"></use>
+						</svg>
+					</button>
 					<nav>
 						<ul class="nav list">
 							<li class="nav__item"><a href="./index.html" class="nav__link link current-page">Студия</a></li>
@@ -39,18 +49,12 @@
 						</li>
 					</ul>
 					<ul class="menu__soc">
-						<li><a href="#" class="menu__soc-link">Instagram</a></li>
-						<li><a href="#" class="menu__soc-link">Twitter</a></li>
-						<li><a href="#" class="menu__soc-link">Facebook</a></li>
-						<li><a href="#" class="menu__soc-link">LinkedIn</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link menu__soc-link--first">Instagram</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link">Twitter</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link">Facebook</a></li>
+						<li class="menu__soc-item"><a href="#" class="menu__soc-link menu__soc-link--last">LinkedIn</a></li>
 					</ul>
 				</div>
-				<button type="button" class="btn-menu" aria-expanded="false" aria-controls="menu">
-					<svg width="19px" height="19px" aria-label="переключатель мобильного меню">
-						<use href="./images/icons.svg#open-menu" class="open-menu"></use>
-						<use href="./images/icons.svg#close-menu" class="close-menu"></use>
-					</svg>
-				</button>
 			</div>
 		</header>
 		<main>
@@ -122,13 +126,21 @@
 					<ul class="list work__list">
 						<li>
 							<a href="" class="work__link">
-								<img src="./images/box-1.jpg" alt="Фото где пишут код" class="work__img" width="370" height="294" />
+								<img
+									srcset="./images/box-1.jpg 1x, ./images/box-1-2x.jpg 2x"
+									src="./images/box-1.jpg"
+									alt="Фото где пишут код"
+									class="work__img"
+									width="370"
+									height="294"
+								/>
 								<span class="work__text">десктопные приложения</span>
 							</a>
 						</li>
 						<li>
 							<a href="" class="work__link">
 								<img
+									srcset="./images/box-2.jpg 1x, ./images/box-2-2x.jpg 2x"
 									src="./images/box-2.jpg"
 									alt="фото с созданием моб приложения"
 									class="work__img"
@@ -141,6 +153,7 @@
 						<li>
 							<a href="" class="work__link">
 								<img
+									srcset="./images/box-3.jpg 1x, ./images/box-3-2x.jpg 2x"
 									src="./images/box-3.jpg"
 									alt="фото с созданием дизайна"
 									class="work__img"
@@ -158,7 +171,13 @@
 					<h2 class="title team__title">Наша команда</h2>
 					<ul class="list team__list">
 						<li class="team__item">
-							<img src="./images/igor-dem.jpg" alt="фото Игорь Демьяненко" class="team__img" width="270" height="260" />
+							<picture>
+								<source srcset="./images/team-1.jpg 1x, ./images/team-1-2x.jpg 2x" media="(min-width: 1200px)" />
+								<source srcset="./images/team-tab-1.jpg 1x, ./images/team-tab-1-2x.jpg 2x" media="(min-width: 768px)" />
+								<source srcset="./images/team-mob-1.jpg 1x, ./images/team-mob-1-2x.jpg 2x" media="(max-width: 767px)" />
+								<img src="./images/team-mob-1.jpg" alt="фото Игорь Демьяненко" class="team__img" />
+							</picture>
+
 							<div class="team__content">
 								<h3 class="title team__name">Игорь Демьяненко</h3>
 								<p lang="en" class="team__profession">Product Designer</p>
@@ -196,7 +215,12 @@
 						</li>
 
 						<li class="team__item">
-							<img src="./images/olga-rep.jpg" alt="фото Ольга Репина" class="team__img" width="270" height="260" />
+							<picture>
+								<source srcset="./images/team-2.jpg 1x, ./images/team-2-2x.jpg 2x" media="(min-width: 1200px)" />
+								<source srcset="./images/team-tab-2.jpg 1x, ./images/team-tab-2-2x.jpg 2x" media="(min-width: 768px)" />
+								<source srcset="./images/team-mob-2.jpg 1x, ./images/team-mob-2-2x.jpg 2x" media="(max-width: 767px)" />
+								<img src="./images/team-mob-2.jpg" alt="фото Ольга Репина" class="team__img" />
+							</picture>
 							<div class="team__content">
 								<h3 class="title team__name">Ольга Репина</h3>
 								<p lang="en" class="team__profession">Frontend Developer</p>
@@ -234,13 +258,12 @@
 						</li>
 
 						<li class="team__item">
-							<img
-								src="./images/nikolay-tarasov.jpg"
-								alt="фото Николай Тарасов"
-								class="team__img"
-								width="270"
-								height="260"
-							/>
+							<picture>
+								<source srcset="./images/team-3.jpg 1x, ./images/team-3-2x.jpg 2x" media="(min-width: 1200px)" />
+								<source srcset="./images/team-tab-3.jpg 1x, ./images/team-tab-3-2x.jpg 2x" media="(min-width: 768px)" />
+								<source srcset="./images/team-mob-3.jpg 1x, ./images/team-mob-3-2x.jpg 2x" media="(max-width: 767px)" />
+								<img src="./images/team-mob-3.jpg" alt="фото Николай Тарасов" class="team__img" />
+							</picture>
 							<div class="team__content">
 								<h3 class="title team__name">Николай Тарасов</h3>
 								<p lang="en" class="team__profession">Marketing</p>
@@ -278,13 +301,12 @@
 						</li>
 
 						<li class="team__item">
-							<img
-								src="./images/mikhail-ermakov.jpg"
-								alt="фото Михаил Ермаков"
-								class="team__img"
-								width="270"
-								height="260"
-							/>
+							<picture>
+								<source srcset="./images/team-4.jpg 1x, ./images/team-4-2x.jpg 2x" media="(min-width: 1200px)" />
+								<source srcset="./images/team-tab-4.jpg 1x, ./images/team-tab-4-2x.jpg 2x" media="(min-width: 768px)" />
+								<source srcset="./images/team-mob-4.jpg 1x, ./images/team-mob-4-2x.jpg 2x" media="(max-width: 767px)" />
+								<img src="./images/team-mob-4.jpg" alt="фото Михаил Ермаков" class="team__img" />
+							</picture>
 							<div class="team__content">
 								<h3 class="title team__name">Михаил Ермаков</h3>
 								<p lang="en" class="team__profession">UI Designer</p>
@@ -375,11 +397,13 @@
 		</main>
 		<footer class="footer">
 			<div class="container footer__container">
-				<div>
-					<!-- prettier-ignore -->
-					<a href="./index.html" class="logo footer__logo">Web<span class="footer__logo--white">Studio</span></a>
+				<div class="footer__common">
 					<address>
 						<ul class="list list__address">
+							<li>
+								<!-- prettier-ignore -->
+								<a href="./index.html" class="logo footer__logo">Web<span class="footer__logo--white">Studio</span></a>
+							</li>
 							<li>
 								<a href="https://goo.gl/maps/J37NzG6z3w71KRSu6" class="address__map">г. Киев, пр-т Леси Украинки, 26</a>
 							</li>
@@ -387,48 +411,50 @@
 							<li><a href="tel:+380991111111" class="link address__link address__link-tel">+38 099 111 11 11</a></li>
 						</ul>
 					</address>
-				</div>
-				<div class="footer-soc">
-					<h2 class="footer-soc__title">присоединяйтесь</h2>
-					<ul class="footer-soc__list list">
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon instagram" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-instagram"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon twitter" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-twitter"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon facebook" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-facebook"></use>
-								</svg>
-							</a>
-						</li>
-						<li class="footer-soc__item">
-							<a href="" class="footer-soc__link item__soc-link">
-								<svg class="soc-icon linkedin" width="20px" height="20px">
-									<use href="./images/icons.svg#icon-linkedin"></use>
-								</svg>
-							</a>
-						</li>
-					</ul>
+					<div class="footer-soc">
+						<h2 class="footer-soc__title">присоединяйтесь</h2>
+						<ul class="footer-soc__list list">
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon instagram" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon twitter" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon facebook" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="footer-soc__item">
+								<a href="" class="footer-soc__link item__soc-link">
+									<svg class="soc-icon linkedin" width="20px" height="20px">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<form class="footer-sign">
 					<p class="footer-sign__title">Подпишитесь на рассылку</p>
-					<label for="footer-mail"></label>
-					<input type="email" name="footer-mail" id="footer-mail" class="footer-sign__input" placeholder="E-mail" />
-					<button type="submit" class="footer__btn-submit">
-						Подписаться
-						<svg class="sign__icon-plane"><use href="./images/icons.svg#icon-send"></use></svg>
-					</button>
+					<div class="sign__wrap">
+						<label for="footer-mail"></label>
+						<input type="email" name="footer-mail" id="footer-mail" class="footer-sign__input" placeholder="E-mail" />
+						<button type="submit" class="footer__btn-submit">
+							Подписаться
+							<svg class="sign__icon-plane"><use href="./images/icons.svg#icon-send"></use></svg>
+						</button>
+					</div>
 				</form>
 			</div>
 		</footer>
