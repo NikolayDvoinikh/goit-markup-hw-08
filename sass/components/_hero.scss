@@ -11,27 +11,27 @@
 		padding-top: 118px;
 		padding-bottom: 118px;
 		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url(../../images/Header-bg-mob.jpg);
+			url(../images/Header-bg-mob.jpg);
 		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-				url(../../images/Header-bg-mob-2x.jpg);
+				url(../images/Header-bg-mob-2x.jpg);
 		}
 
 		@include tab {
 			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-				url(../../images/Header-bg-tab.jpg);
+				url(../images/Header-bg-tab.jpg);
 			@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 				background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-					url(../../images/Header-bg-tab-2x.jpg);
+					url(../images/Header-bg-tab-2x.jpg);
 			}
 		}
 
 		@include desk {
 			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-				url(../../images/Header-bg.jpg);
+				url(../images/Header-bg.jpg);
 			@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 				background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-					url(../../images/Header-bg-2x.jpg);
+					url(../images/Header-bg-2x.jpg);
 			}
 		}
 		background-repeat: no-repeat;
