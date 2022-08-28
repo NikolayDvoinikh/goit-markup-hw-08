@@ -472,16 +472,15 @@ img {
   .menu.is-open {
     position: fixed;
     width: 100%;
-    max-width: 480px;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    max-height: 796px;
     z-index: 2;
     display: flex;
-    flex-wrap: wrap;
-    outline: 2px solid green;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
     background-color: var(--second-text-color);
     padding: 48px 40px;
     transition: transform var(--transition-effect);
@@ -658,46 +657,46 @@ img {
 /* ----------------------Hero--------------------- */
 .hero {
   max-width: 1600px;
-  padding-bottom: 0;
-  padding-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  /* button */
-}
-.hero__container {
-  padding-top: 118px;
-  padding-bottom: 118px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   background-color: #2f303a;
   text-align: center;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* button */
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero__container {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-bg-mob-2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
-  .hero__container {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-bg-tab.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero__container {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-bg-tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero__container {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-bg.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero__container {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header-bg-2x.jpg);
   }
+}
+.hero__container {
+  padding-top: 118px;
+  padding-bottom: 118px;
 }
 @media screen and (min-width: 1200px) {
   .hero__container {
@@ -754,10 +753,6 @@ img {
 }
 
 /* --------------------особенности------------------ */
-.feature__page {
-  padding-bottom: 0;
-}
-
 .feature__container {
   display: block;
 }
@@ -778,9 +773,15 @@ img {
 .feature__item {
   max-width: 100%;
 }
+.feature__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 768px) {
   .feature__item {
     max-width: calc((100% - 60px) / 2);
+  }
+  .feature__item:nth-child(-n+3) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -816,6 +817,7 @@ img {
 
 /* --------------Чем мы занимаемся------------- */
 .work {
+  padding-top: 0;
   display: none;
 }
 @media screen and (min-width: 1200px) {
@@ -1205,7 +1207,7 @@ img {
 
 /* -----------------PORTFOLIO---------------*/
 .filter {
-  margin-bottom: 54px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: start;
   gap: 8px;
@@ -1214,6 +1216,12 @@ img {
 @media screen and (min-width: 768px) {
   .filter {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 54px;
   }
 }
 .filter__button {

@@ -1,6 +1,7 @@
 /* --------------Чем мы занимаемся------------- */
 
 .work {
+	padding-top: 0;
 	@include desk {
 		display: block;
 	}

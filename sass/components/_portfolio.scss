@@ -1,12 +1,16 @@
 /* -----------------PORTFOLIO---------------*/
 .filter {
-	margin-bottom: 54px;
+	margin-bottom: 40px;
 	display: flex;
 	justify-content: start;
 	gap: 8px;
 	flex-wrap: wrap;
 	@include tab {
 		justify-content: center;
+		margin-bottom: 30px;
+	}
+	@include desk {
+		margin-bottom: 54px;
 	}
 	&__button {
 		background-color: #f5f4fa;

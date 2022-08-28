@@ -1,7 +1,35 @@
 /* ----------------------Hero--------------------- */
 .hero {
 	max-width: 1600px;
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url(../images/Header-bg-mob.jpg);
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../images/Header-bg-mob-2x.jpg);
+	}
 
+	@include tab {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../images/Header-bg-tab.jpg);
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../images/Header-bg-tab-2x.jpg);
+		}
+	}
+
+	@include desk {
+		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+			url(../images/Header-bg.jpg);
+		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+				url(../images/Header-bg-2x.jpg);
+		}
+	}
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	background-color: #2f303a;
+	text-align: center;
 	padding-bottom: 0;
 	padding-top: 0;
 	margin-left: auto;
@@ -10,35 +38,7 @@
 	&__container {
 		padding-top: 118px;
 		padding-bottom: 118px;
-		background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-			url(../images/Header-bg-mob.jpg);
-		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-				url(../images/Header-bg-mob-2x.jpg);
-		}
 
-		@include tab {
-			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-				url(../images/Header-bg-tab.jpg);
-			@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-				background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-					url(../images/Header-bg-tab-2x.jpg);
-			}
-		}
-
-		@include desk {
-			background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-				url(../images/Header-bg.jpg);
-			@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-				background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-					url(../images/Header-bg-2x.jpg);
-			}
-		}
-		background-repeat: no-repeat;
-		background-position: top;
-		background-size: cover;
-		background-color: #2f303a;
-		text-align: center;
 		@include desk {
 			padding-top: 200px;
 			padding-bottom: 200px;
